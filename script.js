@@ -39,11 +39,7 @@ function submitForm() {
       options.push(restaurants[i][0]);
     }
   }
-  // if (options.length === 0) {
-  //     alert("No restaurants meet your criteria");
-  //   } else {
-  //     alert(`The restaurants that meet your criteria are ${options}`);
-  //   }
+
   let restaurantMessage = `You should eat at `;
   if (options.length === 0) {
     alert("No restaurants meet your criteria");
