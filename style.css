@@ -22,7 +22,7 @@ body {
   padding-top: 5px;
 }
 .form-block {
-  float: left;
+  float: right;
   width: 50%;
   background-color: slategray;
   height: 600px;
@@ -35,12 +35,12 @@ body {
   border: 1px solid;
 }
 
-.image-block {
+/* .image-block {
   float: right;
   width: 50%;
   border: 1px solid;
   box-sizing: border-box;
-}
+} */
 
 .input-forms {
   width: 25%;
@@ -54,5 +54,7 @@ body {
   color: white;
 }
 #map {
-  height: 100%;
+  float: left;
+  width: 50%;
+  height: 600px;
 }
