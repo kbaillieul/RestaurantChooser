@@ -55,4 +55,12 @@ function submitForm() {
     }
     alert(restaurantMessage);
   }
+
+  if (options.includes("Pi")) {
+    new google.maps.Marker({
+      position: { lat: 47.56831, lng: -52.70391 },
+      map,
+      title: "Pi",
+    });
+  }
 }

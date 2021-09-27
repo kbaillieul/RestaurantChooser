@@ -20,74 +20,74 @@ function initMap() {
     center: { lat: 47.562, lng: -52.713 },
     zoom: 12,
   });
-  new google.maps.Marker({
-    position: piatoDT,
-    map,
-    title: "Piato (downtown)",
-  });
-  new google.maps.Marker({
-    position: quesada,
-    map,
-    title: "Quesada",
-  });
-  new google.maps.Marker({
-    position: basho,
-    map,
-    title: "Basho",
-  });
-  new google.maps.Marker({
-    position: piDT,
-    map,
-    title: "Pi",
-  });
-  new google.maps.Marker({
-    position: acropolis,
-    map,
-    title: "Acropolis",
-  });
-  new google.maps.Marker({
-    position: cojones,
-    map,
-    title: "Cojones",
-  });
-  new google.maps.Marker({
-    position: sunSushiTorbay,
-    map,
-    title: "Sun Sushi (Torbay Rd)",
-  });
-  new google.maps.Marker({
-    position: sunSushiMP,
-    map,
-    title: "Sun Sushi (Mount Pearl)",
-  });
-  new google.maps.Marker({
-    position: sunSushiDT,
-    map,
-    title: "Sun Sushi (downtown)",
-  });
-  new google.maps.Marker({
-    position: quintanas,
-    map,
-    title: "Quintanas",
-  });
-  new google.maps.Marker({
-    position: evoo,
-    map,
-    title: "EVOO",
-  });
-  new google.maps.Marker({
-    position: sushiIslandDT,
-    map,
-    title: "Sushi Island (downtown)",
-  });
-  new google.maps.Marker({
-    position: sushiIslandKenmount,
-    map,
-    title: "Sushi Island (Kenmount Rd)",
-  });
-  new google.maps.Marker({
-    position: piatoEliz,
-    map,
-    title: "Piato (Elizabeth Ave)",
-  });
+  // new google.maps.Marker({
+  //   position: piatoDT,
+  //   map,
+  //   title: "Piato (downtown)",
+  // });
+  // new google.maps.Marker({
+  //   position: quesada,
+  //   map,
+  //   title: "Quesada",
+  // });
+  // new google.maps.Marker({
+  //   position: basho,
+  //   map,
+  //   title: "Basho",
+  // });
+  // new google.maps.Marker({
+  //   position: piDT,
+  //   map,
+  //   title: "Pi",
+  // });
+  // new google.maps.Marker({
+  //   position: acropolis,
+  //   map,
+  //   title: "Acropolis",
+  // });
+  // new google.maps.Marker({
+  //   position: cojones,
+  //   map,
+  //   title: "Cojones",
+  // });
+  // new google.maps.Marker({
+  //   position: sunSushiTorbay,
+  //   map,
+  //   title: "Sun Sushi (Torbay Rd)",
+  // });
+  // new google.maps.Marker({
+  //   position: sunSushiMP,
+  //   map,
+  //   title: "Sun Sushi (Mount Pearl)",
+  // });
+  // new google.maps.Marker({
+  //   position: sunSushiDT,
+  //   map,
+  //   title: "Sun Sushi (downtown)",
+  // });
+  // new google.maps.Marker({
+  //   position: quintanas,
+  //   map,
+  //   title: "Quintanas",
+  // });
+  // new google.maps.Marker({
+  //   position: evoo,
+  //   map,
+  //   title: "EVOO",
+  // });
+  // new google.maps.Marker({
+  //   position: sushiIslandDT,
+  //   map,
+  //   title: "Sushi Island (downtown)",
+  // });
+  // new google.maps.Marker({
+  //   position: sushiIslandKenmount,
+  //   map,
+  //   title: "Sushi Island (Kenmount Rd)",
+  // });
+  // new google.maps.Marker({
+  //   position: piatoEliz,
+  //   map,
+  //   title: "Piato (Elizabeth Ave)",
+  // });
 }
