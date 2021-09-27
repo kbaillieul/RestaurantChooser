@@ -3,20 +3,62 @@ formSubmit.addEventListener("click", submitForm);
 
 function submitForm() {
   let restaurants = [
-    ["Piato (downtown)", "pizza", "downtown", "moderate"],
-    ["Quesada", "mexican", "westEnd", "low"],
-    ["Basho", "sushi", "downtown", "high"],
-    ["Pi", "pizza", "downtown", "moderate"],
-    ["Acropolis", "pizza", "westEnd", "low"],
-    ["Cojones", "mexican", "downtown", "moderate"],
-    ["Sun Sushi (Torbay Road)", "sushi", "eastEnd", "moderate"],
-    ["Sun Sushi (Mount Pearl)", "sushi", "westEnd", "moderate"],
-    ["Sun Sushi (Downtown)", "sushi", "downtown", "moderate"],
-    ["Quintanas", "mexican", "eastEnd", "moderate"],
-    ["EVOO", "pizza", "downtown", "moderate"],
-    ["Sushi Island (downtown)", "sushi", "downtown", "moderate"],
-    ["Sushi Island (Kenmount Road)", "sushi", "westEnd", "moderate"],
-    ["Piato (Elizabeth Ave)", "pizza", "eastEnd", "moderate"],
+    ["Piato (downtown)", "pizza", "downtown", "moderate", 47.56301, -52.71025],
+    ["Quesada", "mexican", "westEnd", "low", 47.55087, -52.78008],
+    ["Basho", "sushi", "downtown", "high", 47.56555, -52.70671],
+    ["Pi", "pizza", "downtown", "moderate", 47.56831, -52.70391],
+    ["Acropolis", "pizza", "westEnd", "low", 47.5107, -52.82034],
+    ["Cojones", "mexican", "downtown", "moderate", 47.56423, -52.70691],
+    [
+      "Sun Sushi (Torbay Road)",
+      "sushi",
+      "eastEnd",
+      "moderate",
+      47.6019,
+      -52.71267,
+    ],
+    [
+      "Sun Sushi (Mount Pearl)",
+      "sushi",
+      "westEnd",
+      "moderate",
+      47.50289,
+      -52.81132,
+    ],
+    [
+      "Sun Sushi (Downtown)",
+      "sushi",
+      "downtown",
+      "moderate",
+      47.56809,
+      -52.70388,
+    ],
+    ["Quintanas", "mexican", "eastEnd", "moderate", 47.57476, -52.72387],
+    ["EVOO", "pizza", "downtown", "moderate", 47.5618, -52.7098],
+    [
+      "Sushi Island (downtown)",
+      "sushi",
+      "downtown",
+      "moderate",
+      47.56408,
+      -52.70752,
+    ],
+    [
+      "Sushi Island (Kenmount Road)",
+      "sushi",
+      "westEnd",
+      "moderate",
+      47.5492,
+      -52.78407,
+    ],
+    [
+      "Piato (Elizabeth Ave)",
+      "pizza",
+      "eastEnd",
+      "moderate",
+      47.58478,
+      -52.71099,
+    ],
   ];
   let foodTypeInput = document.getElementById("foodType");
   let foodTypeSelection = foodTypeInput.value;
@@ -36,7 +78,7 @@ function submitForm() {
       selectedOptions[1] === restaurants[i][2] &&
       selectedOptions[2] === restaurants[i][3]
     ) {
-      options.push(restaurants[i][0]);
+      options.push(restaurants[i]);
     }
   }
 
@@ -46,21 +88,21 @@ function submitForm() {
   } else {
     for (let i = 0; i < options.length; i++) {
       if (options.length === 1) {
-        restaurantMessage += `${options[i]}`;
+        restaurantMessage += `${options[i][0]}`;
       } else if (i === 0) {
-        restaurantMessage += `${options[i]} `;
+        restaurantMessage += `${options[i][0]} `;
       } else {
-        restaurantMessage += `or ${options[i]} `;
+        restaurantMessage += `or ${options[i][0]} `;
       }
     }
     alert(restaurantMessage);
   }
 
-  if (options.includes("Pi")) {
+  for (let i = 0; i < options.length; i++) {
     new google.maps.Marker({
-      position: { lat: 47.56831, lng: -52.70391 },
+      position: { lat: options[i][4], lng: options[i][5] },
       map,
-      title: "Pi",
+      title: options[i][0],
     });
   }
 }
