@@ -5,6 +5,7 @@ function addMarkers(positions) {
       position: { lat: positions[i][0], lng: positions[i][1] },
       animation: google.maps.Animation.DROP,
       map,
+      title: positions[i][2],
     });
     markers.push(marker);
   }
@@ -135,7 +136,7 @@ function submitForm() {
 
   let positions = [];
   for (let i = 0; i < options.length; i++) {
-    const position = [options[i][4], options[i][5]];
+    const position = [options[i][4], options[i][5], options[i][0]];
     positions.push(position);
   }
   addMarkers(positions);
