@@ -3,6 +3,7 @@ function addMarkers(positions) {
   for (let i = 0; i < positions.length; i++) {
     const marker = new google.maps.Marker({
       position: { lat: positions[i][0], lng: positions[i][1] },
+      animation: google.maps.Animation.DROP,
       map,
     });
     markers.push(marker);
