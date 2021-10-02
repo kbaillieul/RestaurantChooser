@@ -1,43 +1,7 @@
-let markers = [];
-function addMarkers(positions) {
-  for (let i = 0; i < positions.length; i++) {
-    const marker = new google.maps.Marker({
-      position: { lat: positions[i][0], lng: positions[i][1] },
-      animation: google.maps.Animation.DROP,
-      map,
-      title: positions[i][2],
-    });
-    markers.push(marker);
-  }
-}
-
-function setMapOnAll(map) {
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-  }
-}
-
-// Removes the markers from the map, but keeps them in the array.
-function hideMarkers() {
-  setMapOnAll(null);
-}
-
-// Shows any markers currently in the array.
-function showMarkers() {
-  setMapOnAll(map);
-}
-
-// Deletes all markers in the array by removing references to them.
-function deleteMarkers() {
-  hideMarkers();
-  markers = [];
-}
-
 let formSubmit = document.getElementById("formButton");
 formSubmit.addEventListener("click", submitForm);
 
 function submitForm() {
-  deleteMarkers();
   let restaurants = [
     ["Piato (downtown)", "pizza", "downtown", "moderate", 47.56301, -52.71025],
     ["Quesada", "mexican", "westEnd", "low", 47.55087, -52.78008],
@@ -133,11 +97,4 @@ function submitForm() {
     }
     alert(restaurantMessage);
   }
-
-  let positions = [];
-  for (let i = 0; i < options.length; i++) {
-    const position = [options[i][4], options[i][5], options[i][0]];
-    positions.push(position);
-  }
-  addMarkers(positions);
 }

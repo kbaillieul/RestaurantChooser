@@ -2,9 +2,7 @@
 <html>
   <head>
     <title>Restaurant Chooser</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="mapsapi.js"></script>
   </head>
   <body>
     <header class="main-header">
@@ -17,11 +15,7 @@
         below and click 'Submit' to choose a restaurant
       </h3>
     </section>
-    <div id="map"></div>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&v=weekly"
-      async
-    ></script>
+
     <section class="main-box">
       <div class="form-block">
         <form>
@@ -49,9 +43,9 @@
           <input id="formButton" type="button" value="Submit" />
         </form>
       </div>
-      <!-- <div class="image-block">
-        <img src="map.jpg" />
-      </div> -->
+      <div class="image-block">
+        <img src="background.jpg" />
+      </div>
     </section>
     <script src="script.js"></script>
   </body>

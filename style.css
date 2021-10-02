@@ -12,8 +12,7 @@ body {
 
 .description-box {
   text-align: center;
-  background-image: url("food.jpg");
-  background-repeat: no-repeat;
+  background-color: grey;
   height: 50px;
   background-size: cover;
   color: white;
@@ -22,7 +21,7 @@ body {
   padding-top: 5px;
 }
 .form-block {
-  float: right;
+  float: left;
   width: 50%;
   background-color: slategray;
   height: 600px;
@@ -35,12 +34,13 @@ body {
   border: 1px solid;
 }
 
-/* .image-block {
+.image-block {
   float: right;
   width: 50%;
   border: 1px solid;
   box-sizing: border-box;
-} */
+  height: 600px;
+}
 
 .input-forms {
   width: 25%;
@@ -53,10 +53,10 @@ body {
   background-color: black;
   color: white;
 }
-#map {
+/* #map {
   float: left;
   width: 50%;
   height: 600px;
   border: 1px solid;
   box-sizing: border-box;
-}
+} */
