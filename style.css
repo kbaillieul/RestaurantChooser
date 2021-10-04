@@ -20,26 +20,32 @@ body {
     1px 1px 0 #000;
   padding-top: 5px;
 }
-.form-block {
-  float: left;
-  width: 50%;
+
+#main-box {
   background-color: slategray;
-  height: 600px;
-  padding-top: 100px;
-  padding-left: 50px;
-  box-sizing: border-box;
-  font-size: 2em;
-  line-height: 2em;
-  text-align: center;
-  border: 1px solid;
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
 }
 
-.image-block {
-  float: right;
-  width: 50%;
-  border: 1px solid;
-  box-sizing: border-box;
-  height: 600px;
+#main-box #image-block {
+  position: relative;
+  background-image: url("background.jpg");
+  background-size: cover;
+  width: 800px;
+  height: 640px;
+  margin-top: 50px;
+  margin: auto;
+  overflow: hidden;
+}
+
+#image-block #form-block {
+  position: relative;
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  background: grey;
+  margin-top: 200px;
 }
 
 .input-forms {
@@ -53,10 +59,3 @@ body {
   background-color: black;
   color: white;
 }
-/* #map {
-  float: left;
-  width: 50%;
-  height: 600px;
-  border: 1px solid;
-  box-sizing: border-box;
-} */
