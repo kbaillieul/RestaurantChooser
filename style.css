@@ -1,5 +1,5 @@
 body {
-  background: #666;
+  background: #222;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -42,20 +42,18 @@ nav a {
 }
 
 nav a:hover {
-  color: lightsalmon;
+  color: #666;
 }
 
 #image-block {
   position: relative;
-  background-image: url("background.jpg");
+  background-image: url("altbackground.png");
   background-size: cover;
   width: 1100px;
   height: 805px;
   margin-top: 50px;
   margin: auto;
   overflow: hidden;
-  border-width: 2px;
-  border-color: white;
 }
 
 #image-block #form-block {
@@ -63,18 +61,20 @@ nav a:hover {
   width: 30%;
   height: 30%;
   margin: auto;
-  background: #666;
-  margin-top: 300px;
+  margin-top: 275px;
   text-align: center;
   line-height: 1.5em;
-  padding-top: 50px;
+  padding-top: 100px;
   font-weight: bold;
+  text-transform: uppercase;
+  color: white;
 }
 
 .input-forms {
   width: 50%;
   height: 40px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .formButton {
