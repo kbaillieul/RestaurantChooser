@@ -7,8 +7,9 @@ HTML, CSS, and JavaScript were used to create three pages:
 1. The Home page contains a form with dropdowns the user can use to make selections for cuisine type, neighbourhood and price point that will be used to select a suitable restaurant in the St. John's Metro area.
    ![alt text](https://github.com/kbaillieul/RestaurantChooser/blob/master/Capture.JPG?raw=true)
 2. The Buy Gift Cards page contains links to the restaurant's webpages for each restaurant featured in this project.
-3. The Menus page contains links to the menus of each restaurant featured in this project.
    ![alt text](https://github.com/kbaillieul/RestaurantChooser/blob/master/Capture3.JPG?raw=true)
+3. The Menus page contains links to the menus of each restaurant featured in this project.
+   ![alt text](https://github.com/kbaillieul/RestaurantChooser/blob/master/Capture4.JPG?raw=true)
 
 How it Works:
 

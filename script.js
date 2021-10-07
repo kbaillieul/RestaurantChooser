@@ -1,7 +1,10 @@
+"use strict";
+
 let formSubmit = document.getElementById("formButton");
 formSubmit.addEventListener("click", submitForm);
 
 function submitForm() {
+  //Array containing name, cuisine, neighbourhood, price point, lat, and long for each restaurant
   let restaurants = [
     ["Piato (downtown)", "pizza", "downtown", "moderate", 47.56301, -52.71025],
     ["Quesada", "mexican", "westEnd", "low", 47.55087, -52.78008],
@@ -60,18 +63,22 @@ function submitForm() {
       -52.71099,
     ],
   ];
-  let foodTypeInput = document.getElementById("foodType");
-  let foodTypeSelection = foodTypeInput.value;
-  let neighbourhoodInput = document.getElementById("neighbourhood");
-  let neighbourhoodSelection = neighbourhoodInput.value;
-  let priceInput = document.getElementById("price");
-  let priceSelection = priceInput.value;
+
+  //Object to hold inputs from form
+  let inputs = {
+    foodTypeInput: document.getElementById("foodType"),
+    neighbourhoodInput: document.getElementById("neighbourhood"),
+    priceInput: document.getElementById("price"),
+  };
+  //Array that holds value of selected cuisine, neighbourhood and price inputs
   let selectedOptions = [
-    foodTypeSelection,
-    neighbourhoodSelection,
-    priceSelection,
+    inputs.foodTypeInput.value,
+    inputs.neighbourhoodInput.value,
+    inputs.priceInput.value,
   ];
+  //Options array to hold values of restaurants that match users input criteria
   let options = [];
+  //Loop through users input cuisine, neighbourhood and price to compare with cuisine, neighbourhood, and price of every restaurant in array. Restaurants that meet all users selected criteria have restaurant name pushed to options array to be output to user.
   for (let i = 0; i < restaurants.length; i++) {
     if (
       selectedOptions[0] === restaurants[i][1] &&
@@ -81,7 +88,7 @@ function submitForm() {
       options.push(restaurants[i]);
     }
   }
-
+  //Loop to configure output message to user with selected restaurant(s) depending on number of restaurant names in options array
   let restaurantMessage = `You should eat at `;
   if (options.length === 0) {
     alert("No restaurants meet your criteria");
