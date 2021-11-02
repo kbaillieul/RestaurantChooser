@@ -11,7 +11,7 @@ function initMap() {
 
 // var config = {
 //   method: "get",
-//   url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=1500&type=restaurant&keyword=cruise&key=AIzaSyDhxgRqOzJUo_L5_2hJoHdv9nd5luSvSHE",
+//   url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&radius=1500&type=restaurant&keyword=cruise&key=key",
 //   headers: {},
 // };
 
