@@ -23,13 +23,16 @@ function initMap() {
 //     console.log(error);
 //   });
 
-const api_url =
-  "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.560539%2C-52.71025&radius=1500&type=restaurant&key=key";
+const api_url = "https://jsonplaceholder.typicode.com/posts/1";
+let dataoutput = document.getElementById("apiOutput");
+//   "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=47.560539%2C-52.71025&radius=1500&type=restaurant&key=key";
 
 async function getData() {
   const response = await fetch(api_url);
   const data = await response.json();
   console.log(data);
+  console.log(data.body);
+  document.getElementById("apiOutput").innerHTML = data.body;
 }
 
 getData();
