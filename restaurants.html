@@ -4,7 +4,6 @@
     <title>Restaurants</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="mapsapi.js"></script>
   </head>
   <body>
     <header>
@@ -21,13 +20,10 @@
       </div>
     </header>
     <section class="restaurants">
-      <div id="map"></div>
-      <script
-        src="https://maps.googleapis.com/maps/api/js?key=key&libraries=places&callback=initMap&v=weekly"
-        async
-      ></script>
       <div></div>
+      <button id="apiSubmit" type="button">Submit Request</button>
       <p id="apiOutput">Test</p>
     </section>
+    <script src="mapsapi.js"></script>
   </body>
 </html>
