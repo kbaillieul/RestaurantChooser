@@ -136,9 +136,5 @@ p {
 }
 
 #map {
-  position: relative;
-  width: 75%;
-  height: 300px;
-  border: 1px solid;
-  box-sizing: border-box;
+  height: 100%;
 }

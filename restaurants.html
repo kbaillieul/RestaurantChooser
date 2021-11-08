@@ -1,9 +1,11 @@
+-->
 <!DOCTYPE html>
 <html>
   <head>
     <title>Restaurants</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="mapsapi.js"></script>
   </head>
   <body>
     <header>
@@ -19,11 +21,12 @@
         </nav>
       </div>
     </header>
-    <section class="restaurants">
-      <div></div>
-      <button id="apiSubmit" type="button">Submit Request</button>
-      <p id="apiOutput">Test</p>
-    </section>
-    <script src="mapsapi.js"></script>
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=places&v=weekly"
+      async
+    ></script>
   </body>
 </html>
