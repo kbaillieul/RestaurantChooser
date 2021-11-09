@@ -23,13 +23,6 @@
       <div id="image-block">
         <div id="form-block">
           <form>
-            <label>Cuisine</label>
-            <select class="input-forms" name="foodType" id="foodType">
-              <option value="pizza">Pizza</option>
-              <option value="mexican">Mexican</option>
-              <option value="sushi">Sushi</option>
-            </select>
-            <div></div>
             <label>Neighbourhood</label>
             <select class="input-forms" name="neighbourhood" id="neighbourhood">
               <option value="downtown">Downtown</option>
@@ -39,9 +32,11 @@
             <div></div>
             <label>Price</label>
             <select class="input-forms" name="price" id="price">
-              <option value="low">$</option>
-              <option value="moderate">$$</option>
-              <option value="high">$$$</option>
+              <option value="0">$</option>
+              <option value="1">$$</option>
+              <option value="2">$$$</option>
+              <option value="3">$$$$</option>
+              <option value="4">$$$$$</option>
             </select>
             <div></div>
             <input id="formButton" type="button" value="Submit" />
@@ -49,6 +44,6 @@
         </div>
       </div>
     </section>
-    <script src="script.js"></script>
+    <script src="mapsapi.js"></script>
   </body>
 </html>

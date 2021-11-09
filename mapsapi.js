@@ -1,11 +1,44 @@
 "use strict";
+let selectedLocation = { lat: 47.5605, lng: -52.7128 };
+let locationRadius = 1000;
+let formSubmit = document.getElementById("formButton");
+formSubmit.addEventListener("click", submitForm);
 
+function submitForm() {
+  let inputs = {
+    neighbourhoodInput: document.getElementById("neighbourhood"),
+    priceInput: document.getElementById("price"),
+  };
+  //Array that holds value of selected neighbourhood and price inputs
+  let selectedOptions = [
+    inputs.neighbourhoodInput.value,
+    inputs.priceInput.value,
+  ];
+  console.log(selectedOptions);
+
+  let locations = [
+    ["downtown", 47.5605, -52.7128, 1000],
+    ["eastEnd", 47.611, -52.7237, 2000],
+    ["westEnd", 47.5355, -52.7128, 1500],
+  ];
+  for (let i = 0; i < locations.length; i++) {
+    if (locations[i][0] === selectedOptions[0]) {
+      selectedLocation = { lat: locations[i][1], lng: locations[i][2] };
+      locationRadius = locations[i][3];
+    }
+  }
+  console.log(selectedLocation, locationRadius);
+}
 function initMap() {
   // Create the map.
-  const stjohns = { lat: 47.56, lng: -52.713 };
+
+  // const downtown = { lat: 47.5605, lng: -52.7128 };
+  // const eastEnd = { lat: 47.611, lng: -52.7237 };
+  // const westEnd = { lat: 47.5355, lng: -52.7513 };
+
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: stjohns,
-    zoom: 12,
+    center: selectedLocation,
+    zoom: 15,
     mapId: "8d193001f940fde3",
   });
   // Create the places service.
@@ -22,7 +55,11 @@ function initMap() {
 
   // Perform a nearby search.
   service.nearbySearch(
-    { location: stjohns, radius: 5000, type: "restaurant" },
+    {
+      location: selectedLocation,
+      radius: locationRadius,
+      type: "restaurant",
+    },
     (results, status, pagination) => {
       if (status !== "OK" || !results) return;
 
