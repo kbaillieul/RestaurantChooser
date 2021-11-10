@@ -2,6 +2,7 @@
 
 let selectedLocation = { lat: 47.5605, lng: -52.7128 };
 let locationRadius = 1000;
+let selectedPrice;
 let formSubmit = document.getElementById("formButton");
 formSubmit.addEventListener("click", submitForm);
 
@@ -21,6 +22,10 @@ function submitForm() {
     ["downtown", 47.5605, -52.7128, 2500],
     ["eastEnd", 47.611, -52.7237, 3000],
     ["westEnd", 47.5355, -52.7128, 2500],
+    ["northEnd", 47.5551, -52.7838, 2500],
+    ["mountPearl", 47.5207, -52.8077, 2500],
+    ["paradise", 47.5284, -52.8714, 2500],
+    ["cbs", 47.5086, -52.9936, 3500],
   ];
   for (let i = 0; i < locations.length; i++) {
     if (locations[i][0] === selectedOptions[0]) {
@@ -43,7 +48,13 @@ function submitForm() {
 
   // Perform a nearby search.
   service.nearbySearch(
-    { location: selectedLocation, radius: locationRadius, type: "restaurant" },
+    {
+      location: selectedLocation,
+      radius: locationRadius,
+      type: "restaurant",
+      minPriceLevel: selectedOptions[1],
+      maxPriceLevel: selectedOptions[1],
+    },
     (results, status, pagination) => {
       if (status !== "OK" || !results) return;
 
