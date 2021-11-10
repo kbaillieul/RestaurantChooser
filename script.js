@@ -1,11 +1,20 @@
 "use strict";
+//Variables to hold users selected location and price point
+let selectedLocation;
+let locationRadius;
 
-let selectedLocation = { lat: 47.5605, lng: -52.7128 };
-let locationRadius = 1000;
-let selectedPrice;
+//Event handlers for Submit and Reset buttons
 let formSubmit = document.getElementById("formButton");
 formSubmit.addEventListener("click", submitForm);
+let resetSubmit = document.getElementById("resetButton");
+resetSubmit.addEventListener("click", resetForm);
 
+//Reset function to reload page on click of reset button
+function resetForm() {
+  window.location.reload(false);
+}
+
+//Submit function to complete search of restaurants in user's selected location and price range on Submit button click
 function submitForm() {
   let inputs = {
     neighbourhoodInput: document.getElementById("neighbourhood"),
@@ -16,37 +25,28 @@ function submitForm() {
     inputs.neighbourhoodInput.value,
     inputs.priceInput.value,
   ];
-  console.log(selectedOptions);
-
+  //Array that holds latitude, longitude, and radius to define boundaries for each available location region user can select from
   let locations = [
     ["downtown", 47.5605, -52.7128, 2500],
     ["eastEnd", 47.611, -52.7237, 3000],
     ["westEnd", 47.5355, -52.7128, 2500],
-    ["northEnd", 47.5551, -52.7838, 2500],
+    ["northEnd", 47.5551, -52.7838, 2750],
     ["mountPearl", 47.5207, -52.8077, 2500],
     ["paradise", 47.5284, -52.8714, 2500],
     ["cbs", 47.5086, -52.9936, 3500],
+    ["cityCentre", 47.5869, -52.7361, 2000],
   ];
+  //Loop through locations array to find location information that matches users selected input
   for (let i = 0; i < locations.length; i++) {
     if (locations[i][0] === selectedOptions[0]) {
       selectedLocation = { lat: locations[i][1], lng: locations[i][2] };
       locationRadius = locations[i][3];
     }
   }
-  console.log(selectedLocation, locationRadius);
-
+  //Places Nearby search initiated with PlaceService's nearbySearch() method, returns array of PlaceResult objects
   const service = new google.maps.places.PlacesService(map);
-  let getNextPage;
-  const moreButton = document.getElementById("more");
 
-  moreButton.onclick = function () {
-    moreButton.disabled = true;
-    if (getNextPage) {
-      getNextPage();
-    }
-  };
-
-  // Perform a nearby search.
+  // Perform a nearby search for criteria given by user
   service.nearbySearch(
     {
       location: selectedLocation,
@@ -55,24 +55,19 @@ function submitForm() {
       minPriceLevel: selectedOptions[1],
       maxPriceLevel: selectedOptions[1],
     },
-    (results, status, pagination) => {
+    //if status not okay or no results then return, else create markers
+    (results, status) => {
       if (status !== "OK" || !results) return;
 
       addPlaces(results, map);
-      moreButton.disabled = !pagination || !pagination.hasNextPage;
-      if (pagination && pagination.hasNextPage) {
-        getNextPage = () => {
-          // Note: nextPage will call the same handler function as the initial call
-          pagination.nextPage();
-        };
-      }
     }
   );
 }
 
+//Function to add markers to map and results list
 function addPlaces(places, map) {
   const placesList = document.getElementById("places");
-
+  //iterate through results array
   for (const place of places) {
     if (place.geometry && place.geometry.location) {
       const image = {
