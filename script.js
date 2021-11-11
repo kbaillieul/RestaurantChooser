@@ -66,6 +66,9 @@ function submitForm() {
 
 //Function to add markers to map and results list
 function addPlaces(places, map) {
+  //increase zoom and pan to map location of selected region from user input
+  map.setZoom(12);
+  map.setCenter(selectedLocation);
   const placesList = document.getElementById("places");
   //iterate through results array
   for (const place of places) {
