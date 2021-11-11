@@ -2,6 +2,8 @@
 //Variables to hold users selected location and price point
 let selectedLocation;
 let locationRadius;
+let completedSearch = [];
+let search = [];
 
 //Event handlers for Submit and Reset buttons
 let formSubmit = document.getElementById("formButton");
@@ -41,6 +43,7 @@ function submitForm() {
     if (locations[i][0] === selectedOptions[0]) {
       selectedLocation = { lat: locations[i][1], lng: locations[i][2] };
       locationRadius = locations[i][3];
+      search = `${selectedOptions[0]}${selectedOptions[1]}`;
     }
   }
   //Places Nearby search initiated with PlaceService's nearbySearch() method, returns array of PlaceResult objects
@@ -57,9 +60,16 @@ function submitForm() {
     },
     //if status not okay or no results then return, else create markers
     (results, status) => {
-      if (status !== "OK" || !results) return;
-
+      if (
+        status !== "OK" ||
+        !results ||
+        completedSearch.includes(search) === true
+      )
+        return;
+      console.log(results);
       addPlaces(results, map);
+      completedSearch.push(search);
+      console.log(completedSearch);
     }
   );
 }
@@ -98,5 +108,3 @@ function addPlaces(places, map) {
     }
   }
 }
-
-//Need conditional logic to stop adding restaurants to results repeatedly
