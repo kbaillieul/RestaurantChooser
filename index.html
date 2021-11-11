@@ -19,6 +19,13 @@
         </nav>
       </div>
     </header>
+    <div id="container">
+      <div id="map"></div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=places&v=weekly"
+      async
+    ></script>
     <section id="main-box">
       <div id="image-block">
         <div id="form-block">
@@ -50,16 +57,9 @@
       </div>
     </section>
     <script src="script.js"></script>
-    <div id="container">
-      <div id="map"></div>
-      <div id="sidebar">
-        <h2>Results</h2>
-        <ul id="places"></ul>
-      </div>
+    <div id="sidebar">
+      <h2>Results</h2>
+      <ul id="places"></ul>
     </div>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=places&v=weekly"
-      async
-    ></script>
   </body>
 </html>

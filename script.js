@@ -95,3 +95,5 @@ function addPlaces(places, map) {
     }
   }
 }
+
+//Need conditional logic to stop adding restaurants to results repeatedly
