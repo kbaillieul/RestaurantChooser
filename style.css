@@ -84,17 +84,13 @@ nav a:hover {
 }
 #map {
   margin-top: 10px;
-  height: 1000px;
-  border: 1px solid;
-  box-sizing: border-box;
-  border-radius: 15px;
-}
-
-#map-container {
+  height: 700px;
+  width: 800px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 #sidebar {
   display: block;
   margin-left: auto;
@@ -171,24 +167,3 @@ p {
   font-size: 12px;
   line-height: 1em;
 }
-
-@media only screen and (min-width: 768px) {
-  #map {
-    height: 700px;
-    float: left;
-    width: 50%;
-  }
-  h3 {
-    font-size: 20px;
-  }
-  .input-forms {
-    font-size: 15px;
-  }
-  #form-block {
-    font-size: 15px;
-  }
-}
-
-/* @media only screen and (min-width: 1000px) {
-
-} */
