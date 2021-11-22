@@ -2,13 +2,11 @@ Overview:
 This is the first html/css/javascript project I created in the Get Coding program. The purpose of this project is to select a restaurant in the St. John's metro region based on selections for neighbourhood and price point. This project uses the Google Maps API and I have chosen not to include the key in Github for security purposes. The project will not execute without the API key but functions as outlined below.
 
 Outline:
-HTML, CSS, and JavaScript were used to create three pages:
+HTML, CSS, and JavaScript were used to create two pages:
 
 1. The Home page contains the Google Maps API and a form the user can use to make selections for neighbourhood and price point. The results are generated using a call to the Google Places Libray.
    ![alt text](https://github.com/kbaillieul/RestaurantChooser/blob/master/Capture.JPG?raw=true)
-2. The Buy Gift Cards page contains links to the restaurant's webpages for restaurants featured in this project.
-   ![alt text](https://github.com/kbaillieul/RestaurantChooser/blob/master/Capture3.JPG?raw=true)
-3. The Menus page contains links to the menus of restaurants featured in this project.
+2. The Menus page contains links to the menus of restaurants featured in this project.
    ![alt text](https://github.com/kbaillieul/RestaurantChooser/blob/master/Capture4.JPG?raw=true)
 
 How it Works:

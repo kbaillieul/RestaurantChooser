@@ -16,10 +16,7 @@ header::after {
 }
 
 .logo {
-  float: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  display: none;
 }
 nav {
   float: right;
@@ -33,13 +30,13 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin: 50px;
+  margin: 20px;
 }
 nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 nav a:hover {
@@ -84,8 +81,8 @@ nav a:hover {
 }
 #map {
   margin-top: 10px;
-  height: 700px;
-  width: 800px;
+  height: 400px;
+  width: 350px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -111,6 +108,7 @@ nav a:hover {
   flex-direction: column;
 }
 
+/* styling for Menu page  */
 .container {
   padding-top: 10px;
   display: grid;
@@ -122,18 +120,7 @@ nav a:hover {
   text-align: center;
   padding-bottom: 10px;
 }
-.giftcard-container {
-  padding-top: 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  grid-gap: 30px;
-  max-width: 600px;
-  margin: 0;
-  text-align: center;
-  padding-bottom: 10px;
-  padding-left: 20px;
-}
+
 h2 {
   color: white;
   text-decoration: none;
@@ -154,16 +141,37 @@ h3 {
   border: 2px solid orange;
   margin: 15px;
 }
-.giftcard-profile {
-  margin: 5px;
-  padding: 40px;
-  border: 5px solid black;
-  background: #666;
-  border-radius: 100px;
-}
 
 p {
   color: white;
   font-size: 12px;
   line-height: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  #map {
+    height: 750px;
+    display: block;
+    float: left;
+    width: 48%;
+    padding: 5px;
+  }
+
+  #sidebar {
+    float: right;
+    width: 48%;
+    height: 750px;
+    padding: 5px;
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
 }
