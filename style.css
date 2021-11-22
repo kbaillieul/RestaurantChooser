@@ -4,6 +4,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* styling for navigation bar */
 header {
   background: black;
 }
@@ -45,8 +46,12 @@ nav a:hover {
   color: #666;
 }
 
-#image-block #form-block {
-  position: relative;
+/* styling for homepage (index.html) */
+
+#form-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 15px;
   text-align: center;
   line-height: 1.5em;
@@ -55,17 +60,9 @@ nav a:hover {
   color: white;
   padding-bottom: 10px;
   padding-top: 10px;
-  float: left;
-  width: 50%;
-  flex-basis: 5rem;
-  flex-grow: 1;
   max-width: 30rem;
-  height: 100%;
-  box-sizing: border-box;
-  overflow: auto;
   border-radius: 15px;
   border: 2px solid orange;
-  margin-top: 10px;
   font-size: 20px;
 }
 
@@ -84,6 +81,38 @@ nav a:hover {
 #resetButton {
   width: 100px;
   height: 25px;
+}
+#map {
+  margin-top: 10px;
+  height: 1000px;
+  border: 1px solid;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+#map-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#sidebar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  flex-basis: 5rem;
+  flex-grow: 1;
+  padding: 1rem;
+  max-width: 30rem;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  border-radius: 15px;
+  border: 2px solid orange;
+  margin-top: 10px;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -141,35 +170,6 @@ p {
   color: white;
   font-size: 12px;
   line-height: 1em;
-}
-
-#map {
-  margin-top: 10px;
-  height: 1000px;
-  border: 1px solid;
-  box-sizing: border-box;
-  border-radius: 15px;
-  margin-right: 10px;
-}
-#sidebar {
-  float: left;
-  width: 50%;
-  flex-basis: 5rem;
-  flex-grow: 1;
-  padding: 1rem;
-  max-width: 30rem;
-  height: 100%;
-  box-sizing: border-box;
-  overflow: auto;
-  border-radius: 15px;
-  border: 2px solid orange;
-  margin-top: 10px;
-  font-size: 25px;
-  color: white;
-}
-#sidebar {
-  display: flex;
-  flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) {

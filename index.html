@@ -19,46 +19,44 @@
         </nav>
       </div>
     </header>
-    <div id="container">
+    <section id="main-box">
+      <div id="form-block">
+        <form>
+          <label>Neighbourhood</label>
+          <select class="input-forms" name="neighbourhood" id="neighbourhood">
+            <option value="downtown">Downtown</option>
+            <option value="cityCentre">City Centre</option>
+            <option value="eastEnd">East End</option>
+            <option value="westEnd">West End</option>
+            <option value="northEnd">North End</option>
+            <option value="mountPearl">Mount Pearl</option>
+            <option value="paradise">Paradise</option>
+            <option value="cbs">CBS</option>
+          </select>
+          <div></div>
+          <label>Price</label>
+          <select class="input-forms" name="price" id="price">
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+          </select>
+          <div></div>
+          <input id="formButton" type="button" value="Submit" />
+          <input id="resetButton" type="button" value="Reset" />
+        </form>
+      </div>
+      <script src="script.js"></script>
+      <div id="sidebar">
+        <h3>Results</h3>
+        <ul id="places"></ul>
+      </div>
+    </section>
+    <div id="map-container">
       <div id="map"></div>
     </div>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2cSy_kVGjD541Jn6MZ0E5c8ddws4Zh1g&callback=initMap&libraries=places&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&libraries=places&v=weekly"
       async
     ></script>
-    <section id="main-box">
-      <div id="image-block">
-        <div id="form-block">
-          <form>
-            <label>Neighbourhood</label>
-            <select class="input-forms" name="neighbourhood" id="neighbourhood">
-              <option value="downtown">Downtown</option>
-              <option value="cityCentre">City Centre</option>
-              <option value="eastEnd">East End</option>
-              <option value="westEnd">West End</option>
-              <option value="northEnd">North End</option>
-              <option value="mountPearl">Mount Pearl</option>
-              <option value="paradise">Paradise</option>
-              <option value="cbs">CBS</option>
-            </select>
-            <div></div>
-            <label>Price</label>
-            <select class="input-forms" name="price" id="price">
-              <option value="1">$</option>
-              <option value="2">$$</option>
-              <option value="3">$$$</option>
-            </select>
-            <div></div>
-            <input id="formButton" type="button" value="Submit" />
-            <input id="resetButton" type="button" value="Reset" />
-          </form>
-        </div>
-      </div>
-    </section>
-    <script src="script.js"></script>
-    <div id="sidebar">
-      <h3>Results</h3>
-      <ul id="places"></ul>
-    </div>
   </body>
 </html>
