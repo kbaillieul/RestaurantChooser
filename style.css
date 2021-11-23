@@ -111,7 +111,6 @@ nav a:hover {
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: minmax(100px, auto);
   text-align: center;
-  width: 375px;
 }
 
 h2 {
@@ -132,7 +131,7 @@ h3 {
   padding-top: 15px;
   border-radius: 15px;
   border: 2px solid orange;
-  margin: 15px;
+  margin: 10px;
 }
 
 p {
@@ -174,7 +173,15 @@ p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px, auto);
-    max-width: 750px;
     text-align: center;
+  }
+  .profile {
+    margin: 2px;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .profile {
+    margin: 10px;
   }
 }
