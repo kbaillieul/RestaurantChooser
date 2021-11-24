@@ -179,12 +179,11 @@ p {
   }
 }
 
-@media only screen and (min-width: 1275px) {
+@media only screen and (min-width: 1300px) {
   .profile {
     margin: 40px;
   }
   #map {
-    height: 100%
     width: 50%;
     margin: 25px;
   }
