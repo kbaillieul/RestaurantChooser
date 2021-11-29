@@ -1,5 +1,5 @@
 Overview:
-This is the first html/css/javascript project I created in the Get Coding program. The purpose of this project is to select a restaurant in the St. John's metro region based on selections for neighbourhood and price point. This project uses the Google Maps API and I have chosen not to include the key in Github for security purposes. The project will not execute without the API key but functions as outlined below.
+This is the first html/css/javascript project I created in the Get Coding program. The purpose of this project is to select a restaurant in the St. John's metro region based on selections for neighbourhood and price point.
 
 Outline:
 HTML, CSS, and JavaScript were used to create two pages:
