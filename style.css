@@ -1,15 +1,15 @@
 body {
-  background: #222;
+  background: #414754;
   margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* styling for navigation bar */
-header {
-  background: black;
+.navbar {
+  background: #414754;
 }
 
-header::after {
+.navbar::after {
   content: "";
   display: table;
   clear: both;
@@ -36,7 +36,7 @@ nav a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 nav a:hover {
@@ -56,27 +56,19 @@ nav a:hover {
   padding-top: 10px;
   max-width: 30rem;
   border-radius: 15px;
-  border: 2px solid orange;
+  border: 2px solid white;
   font-size: 16px;
   margin: 20px;
 }
 
 .input-forms {
   width: 150px;
-  height: 40px;
+  height: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 14px;
 }
 
-#formButton {
-  width: 100px;
-  height: 25px;
-}
-#resetButton {
-  width: 100px;
-  height: 25px;
-}
 #map {
   margin-top: 10px;
   height: 400px;
@@ -97,12 +89,32 @@ nav a:hover {
   box-sizing: border-box;
   overflow: auto;
   border-radius: 15px;
-  border: 2px solid orange;
+  border: 2px solid white;
   font-size: 20px;
   color: white;
   display: flex;
   flex-direction: column;
   margin: 20px;
+}
+
+#formButton {
+  background: white;
+  color: #414754;
+  border: 1pxsolid#eee;
+  border-radius: 20px;
+  box-shadow: 5px5px5px#eee;
+  text-shadow: none;
+  font-weight: bold;
+}
+
+#resetButton {
+  background: white;
+  color: #414754;
+  border: 1pxsolid#eee;
+  border-radius: 20px;
+  box-shadow: 5px5px5px#eee;
+  text-shadow: none;
+  font-weight: bold;
 }
 
 /* styling for Menu page  */
@@ -142,18 +154,22 @@ p {
 
 @media only screen and (min-width: 768px) {
   #map {
-    height: 400px;
+    height: 760px;
     display: block;
     float: left;
-    width: 48%;
-    margin: 5px;
+    width: 50%;
+    margin-top: 0px;
   }
 
-  #sidebar {
+  #main-box {
     float: right;
-    width: 48%;
+    width: 50%;
+  }
+  #sidebar {
     height: 400px;
-    margin: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #form-block {
@@ -164,10 +180,8 @@ p {
 
   .logo {
     display: block;
-    float: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    float: right;
+    padding: 10px;
   }
   .container {
     display: grid;
@@ -185,12 +199,9 @@ p {
   }
   #map {
     width: 50%;
-    margin: 25px;
   }
 
   #sidebar {
     width: 50%;
-    margin: 25px;
-    margin-right: 100px;
   }
 }
