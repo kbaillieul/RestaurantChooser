@@ -18,45 +18,18 @@ body {
 .logo {
   display: none;
 }
-nav {
-  float: right;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin: 20px;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 12px;
-}
-
-nav a:hover {
-  color: #666;
-}
-
-/* styling for homepage (index.html) */
 
 #form-block {
   display: block;
   text-align: center;
-  line-height: 1.5em;
+  line-height: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: white;
+  color: #f6f6f6;
   padding-bottom: 10px;
   padding-top: 10px;
-  max-width: 30rem;
-  border-radius: 15px;
-  border: 2px solid white;
+  max-width: 100%;
+  border: 1px solid #f6f6f6;
   font-size: 16px;
   margin: 20px;
 }
@@ -67,12 +40,13 @@ nav a:hover {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
+  color: #414754;
 }
 
 #map {
   margin-top: 10px;
   height: 400px;
-  width: 350px;
+  width: 100%;
   display: block;
   margin: 10px;
   margin-left: auto;
@@ -84,21 +58,19 @@ nav a:hover {
   flex-basis: 5rem;
   flex-grow: 1;
   padding: 1rem;
-  max-width: 30rem;
+  max-width: 100%;
   height: 100%;
   box-sizing: border-box;
   overflow: auto;
-  border-radius: 15px;
-  border: 2px solid white;
+  border: 1px solid #f6f6f6;
   font-size: 20px;
-  color: white;
+  color: #f6f6f6;
   display: flex;
   flex-direction: column;
-  margin: 20px;
 }
 
 #formButton {
-  background: white;
+  background: #f6f6f6;
   color: #414754;
   border: 1pxsolid#eee;
   border-radius: 20px;
@@ -108,7 +80,7 @@ nav a:hover {
 }
 
 #resetButton {
-  background: white;
+  background: #f6f6f6;
   color: #414754;
   border: 1pxsolid#eee;
   border-radius: 20px;
@@ -117,53 +89,27 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* styling for Menu page  */
-.container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  text-align: center;
-}
-
-h2 {
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 14px;
-}
 h3 {
-  color: white;
+  color: #f6f6f6;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
-}
-
-.profile {
-  padding-top: 15px;
-  border-radius: 15px;
-  border: 2px solid orange;
-  margin: 10px;
-}
-
-p {
-  color: white;
-  font-size: 12px;
-  line-height: 1em;
 }
 
 @media only screen and (min-width: 768px) {
   #map {
-    height: 760px;
+    height: 720px;
     display: block;
     float: left;
-    width: 50%;
+    width: 47%;
     margin-top: 0px;
   }
 
   #main-box {
     float: right;
     width: 50%;
+    padding: 10px;
   }
   #sidebar {
     height: 400px;
@@ -180,28 +126,11 @@ p {
 
   .logo {
     display: block;
-    float: right;
-    padding: 10px;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    text-align: center;
-  }
-  .profile {
-    margin: 2px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media only screen and (min-width: 1300px) {
-  .profile {
-    margin: 40px;
-  }
-  #map {
-    width: 50%;
-  }
+/* @media only screen and (min-width: 1300px) {
 
-  #sidebar {
-    width: 50%;
-  }
-}
+} */
