@@ -22,9 +22,8 @@ body {
 #form-block {
   display: block;
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 2.5rem;
   font-weight: bold;
-  text-transform: uppercase;
   color: #f6f6f6;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -40,7 +39,11 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 14px;
-  color: #414754;
+  color: #333333;
+  background-color: #eeeeee;
+  border: 1px solid #dddddd;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 #map {
@@ -112,7 +115,7 @@ h3 {
     padding: 10px;
   }
   #sidebar {
-    height: 400px;
+    height: 370px;
     display: block;
     margin-left: auto;
     margin-right: auto;
